@@ -5,13 +5,7 @@
 	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
 		http://www.springframework.org/schema/mvc http://www.springframework.org/schema/mvc/spring-mvc.xsd">
 
-	<bean id="wroFilter" class="ro.isdc.wro.http.ConfigurableWroFilter">
-		<property name="properties" ref="wroProperties" />
-	</bean>
-
-	<bean id="wroProperties" class="org.springframework.beans.factory.config.PropertiesFactoryBean">
-		<property name="location" value="classpath:wro.properties" />
-	</bean>
+	<bean id="wroFilter" class="ro.isdc.wro.http.WroFilter"/>
 
 	<mvc:resources mapping="/resources/**" location="/resources/" />
 
